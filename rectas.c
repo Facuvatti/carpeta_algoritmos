@@ -2,13 +2,15 @@
 //función debe decidir si existe una intersección en un sólo punto de las dos rectas.
 #include <stdio.h>
 #include <stdlib.h>
-
+//int se_cruzan(int a, int b, int c, int d){
+//    int x = 0;
+//    int y1 = a*x + b;
+//    int y2 = c*x + d;
+//    printf("%s", y1 == y2 ? "Hay inteseccion":"No hay interseccion");
+//    
+//} //Está mal... No funciona
 int se_cruzan(int a, int b, int c, int d){
-    int x = 1;
-    int y1 = a*x + b;
-    int y2 = c*x + d;
-    printf("%s", y1 == y2 ? "Hay inteseccion":"No hay interseccion");
-    
+    return !(a == c && b!=d)
 }
 int main(int argc, char *argv[]){
     se_cruzan(atoi(argv[1]),atoi(argv[2]),atoi(argv[3]),atoi(argv[4]));    
